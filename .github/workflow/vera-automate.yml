@@ -1,0 +1,17 @@
+name: Vera Automate
+
+on: 
+   push 
+      branches: [main] # runs when you push to main
+
+job: 
+   stage1
+      runs-on: ubuntu-latest 
+
+   steps: 
+     -name: checkout code 
+      uses: actions/checkout@v4 
+
+      -name: say hello 
+       run; echo "workflow is working"    
+      
